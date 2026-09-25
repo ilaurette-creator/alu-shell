@@ -1,0 +1,21 @@
+#!/bin/bash
+
+Title="Programming is Fun"
+Time_now="$(date +"%x %r %Z")"
+Time_stamp= "Updated now $Time_now by $User"
+
+cat <<-  _EOF_
+<Html>
+<Head>
+
+<Title>
+$Title
+</Title>
+</head>
+
+    <body>
+    <h1>$Title</h1>
+    <p>$Time_stamp</p>
+    </body>
+    </html>
+_EOF_
