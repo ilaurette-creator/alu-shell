@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "obase=8; ibase=5; $(echo $WATER | tr 'water' '01234') + $(echo $STIR | tr 'stir.' '01234')" | bc | tr '01234567' 'bestchol'
+python3 -c 'print(oct(int(__import__("os").environ["WATER"].translate(str.maketrans("water", "01234")), 5) + int(__import__("os").environ["STIR"].translate(str.maketrans("stir.", "01234")), 5))[2:].translate(str.maketrans("01234567", "bestchol")))'
